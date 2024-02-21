@@ -1,8 +1,9 @@
-console.log('Bakal Muncul Pertama');
-
-setTimeout(()=>{
-    console.log('Ini udah masuk memory proses tapi dijalan setelah 4 detik');
+setTimeout(function(){
+    document.body.style.backgroundColor = 'red';
+},1000);
+setTimeout(function(){
+    document.body.style.backgroundColor = 'yellow';
+},2000);
+setTimeout(function(){
+    document.body.style.backgroundColor = 'green';
 },3000);
-
-
-console.log('Bakal Muncul Kedua');
