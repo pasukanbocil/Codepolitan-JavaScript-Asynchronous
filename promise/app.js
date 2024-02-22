@@ -24,23 +24,23 @@ const requestPromise = (url) => {
 	});
 };
 
-requestPromise('movie.com')
-.then((result)=>{
-	console.log('page 1');
-	console.log(result);
-	return requestPromise('movie.com');
-})
-.then(()=>{
-	console.log('page 2');
-	return requestPromise('movie.com');
-})
-.then(()=>{
-	console.log('page 3');
-	return requestPromise('movie.com');
-})
-.catch((err)=>{
-	console.log(err);
-});
+// requestPromise('movie.com')
+// .then((result)=>{
+// 	console.log('page 1');
+// 	console.log(result);
+// 	return requestPromise('movie.com');
+// })
+// .then(()=>{
+// 	console.log('page 2');
+// 	return requestPromise('movie.com');
+// })
+// .then(()=>{
+// 	console.log('page 3');
+// 	return requestPromise('movie.com');
+// })
+// .catch((err)=>{
+// 	console.log(err);
+// });
 
 // requestPromise('movie.com').then((response) => {
 // 	console.log('success', response);
@@ -75,3 +75,14 @@ requestPromise('movie.com')
 //  console.log('error',error);   
 // }
 // );
+const contohPromise = () =>{
+
+	return new Promise((resolve, reject) => {
+		// resolve(()=>{
+		// 	'berhasil'
+		// });
+		reject(()=>{
+			'gagal'
+		});
+	});
+};
