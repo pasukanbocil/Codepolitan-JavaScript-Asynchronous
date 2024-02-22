@@ -24,10 +24,36 @@ const requestPromise = (url) => {
 	});
 };
 
-requestCallback('movie.com',function(response){
-    console.log('success',response);
-},
-function (error) {
- console.log('error',error);   
-}
-);
+requestPromise('movie.com').then((response) => {
+	console.log('success', response);
+	requestPromise('movie.com').then((response) => {
+		console.log('success', response);
+	}).catch((error) => {
+		console.log('error', error);
+	});
+	requestPromise('movie.com').then((response) => {
+		console.log('success', response);
+	}).catch((error) => {
+		console.log('error', error);
+	});
+	requestPromise('movie.com').then((response) => {
+		console.log('success', response);
+	}).catch((error) => {
+		console.log('error', error);
+	});
+	requestPromise('movie.com').then((response) => {
+		console.log('success', response);
+	}).catch((error) => {
+		console.log('error', error);
+	});
+}).catch((error) => {
+	console.log('error', error);
+});
+
+// requestCallback('movie.com',function(response){
+//     console.log('success',response);
+// },
+// function (error) {
+//  console.log('error',error);   
+// }
+// );
