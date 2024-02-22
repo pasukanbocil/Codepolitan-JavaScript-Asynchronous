@@ -24,6 +24,16 @@ const requestPromise = (url) => {
 	});
 };
 
+async function requestHandler(){
+	
+	try{
+		let result = 	await requestPromise('movie.com');
+		console.log(result);
+	}catch(error){
+		console.log('Error',error);
+	}
+}
+
 // requestPromise('movie.com')
 // .then((result)=>{
 // 	console.log('page 1');
@@ -75,14 +85,14 @@ const requestPromise = (url) => {
 //  console.log('error',error);   
 // }
 // );
-const contohPromise = () =>{
+// const contohPromise = () =>{
 
-	return new Promise((resolve, reject) => {
-		// resolve(()=>{
-		// 	'berhasil'
-		// });
-		reject(()=>{
-			'gagal'
-		});
-	});
-};
+// 	return new Promise((resolve, reject) => {
+// 		// resolve(()=>{
+// 		// 	'berhasil'
+// 		// });
+// 		reject(()=>{
+// 			'gagal'
+// 		});
+// 	});
+// };
